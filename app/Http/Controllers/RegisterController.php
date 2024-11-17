@@ -23,6 +23,6 @@ class RegisterController extends Controller
         if (true) {
             return redirect()->back()->withInput();
         }
-        return redirect()->route('user');
+
     }
 }
