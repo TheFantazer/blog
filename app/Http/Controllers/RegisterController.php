@@ -19,6 +19,10 @@ class RegisterController extends Controller
         $agreement = $request->input('agreement');
         dd($agreement, $name, $email, $password);
         return 'Запрос на регистрацию';*/
+
+        if (true) {
+            return redirect()->back()->withInput();
+        }
         return redirect()->route('user');
     }
 }

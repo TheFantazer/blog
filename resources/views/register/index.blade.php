@@ -30,7 +30,7 @@
 
                 <x-form-item>
                     <x-label required>{{ __('Пароль') }}</x-label>
-                    <x-input type="password" name="password" />
+                    <x-input type="password" name="password"/>
                 </x-form-item>
 
                 <x-form-item>
@@ -39,7 +39,7 @@
                 </x-form-item>
 
                 <x-form-item>
-                    <x-checkbox name="agreement">
+                    <x-checkbox name="agreement" >
                         {{ __('Я согласен на обработку пользовательский данных') }}
                     </x-checkbox>
                 </x-form-item>

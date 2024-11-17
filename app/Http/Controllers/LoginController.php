@@ -20,7 +20,10 @@ class LoginController extends Controller
         $agreement = $request->boolean('agreement');
         dd($email, $password, $agreement);*/
 //        return response()->redirectToRoute('/foo');
-        return redirect()->route('user');
+
+        if (true) {
+            return redirect()->back()->withInput();
+        }
 //        return 'Запрос на вход';
     }
 }
