@@ -8,22 +8,24 @@ class LoginController extends Controller
 {
     public function index()
     {
+//        dd(session()->all());
+//        $foo = session('foo');
+//        dd($foo);
+
         return view('login.index');
+
     }
-
     public function store(Request $request)
-    {/*
-        $ip = $request->ip();
-        dd($ip);
-        $email = $request->input('email');
-        $password = $request->input('password');
-        $agreement = $request->boolean('agreement');
-        dd($email, $password, $agreement);*/
-//        return response()->redirectToRoute('/foo');
+    {
+//        session(['foo'=>'bar']);
+//        dd($session) ;
 
-        if (true) {
+        session(['alert'=>__('Приветствую вас, мой господин!')]);
+
+
+        /*if (true) {
             return redirect()->back()->withInput();
-        }
-//        return 'Запрос на вход';
+        }*/
+        return redirect('user');
     }
 }
