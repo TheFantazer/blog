@@ -10,7 +10,7 @@ class Currency extends Model
     use HasFactory;
 
     public $incrementing = false;
-
+// bla bla
     protected $fillable = [
         'price', 'name',
         'active', 'sort',
