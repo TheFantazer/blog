@@ -27,9 +27,11 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        $title = $request->input('title');
-        $content = $request->input('content');
-//        dd($title, $content);
+        $validated = validator($request->all(), [
+            'title' => ['required', 'string', 'max:100'],
+            'content' => ['required', 'string', 'max:10000'],
+        ])->validate();
+       dd($validated);
 
     return redirect()->route('user.posts.show', 123);
     }
@@ -58,9 +60,11 @@ class PostController extends Controller
 
     public function update(Request $request, $post)
     {
-        $title = $request->input('title');
-        $content = $request->input('content');
-     //   dd($title, $content);
+        $validated = validator($request->all(), [
+            'title' => ['required', 'string', 'max:100'],
+            'content' => ['required', 'string', 'max:10000'],
+        ])->validate();
+        dd($validated);
 
         return redirect()->back();
     }
